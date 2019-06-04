@@ -10,3 +10,4 @@ RUN pip3 install 'numpy>=1.12.0' lxml
 RUN wget http://prdownloads.sourceforge.net/scons/scons-3.0.5.tar.gz && tar -xaf scons-3.0.5.tar.gz && cd scons-3.0.5 && python3 setup.py install --prefix=/usr && cd ..
 RUN wget ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4.6.1.tar.gz && tar -xaf netcdf-4.6.1.tar.gz && cd netcdf-4.6.1 && CC=h5pcc ./configure --prefix=/usr --enable-shared=no --disable-dap && make && make install && cd ..
 RUN wget https://github.com/hfp/libxsmm/archive/master.zip && unzip master.zip && cd libxsmm-master && make generator && cp bin/libxsmm_gemm_generator /usr/bin && cd ..
+RUN useradd -ms /bin/bash seissol
