@@ -2,7 +2,6 @@ FROM ubuntu:xenial
 MAINTAINER Lukas Krenz (lukas.krenz@in.tum.de)
 RUN apt update -qq && apt install wget software-properties-common -y
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
-RUN
 
 RUN apt update -qq && apt install -y -qq g++-5 gfortran openmpi-bin openmpi-common libopenmpi-dev hdf5-tools libhdf5-openmpi-10 libhdf5-openmpi-dev python3 python3-pip libmetis-dev libparmetis-dev m4 unzip git python cmake pkg-config
 RUN pip3 install --upgrade pip
